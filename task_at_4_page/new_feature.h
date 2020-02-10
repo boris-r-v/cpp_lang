@@ -33,6 +33,8 @@ class Singleton
     	~Singleton() = default;
     	Singleton( Singleton const& ) = delete;
 	Singleton& operator=( Singleton const& ) = delete;
+    	Singleton( Singleton const&& ) = delete;
+	Singleton&& operator=( Singleton const&& ) = delete;
 
     public:
 	static T* instance()
